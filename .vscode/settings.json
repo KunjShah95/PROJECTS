@@ -1,0 +1,7 @@
+{
+    "editor.acceptSuggestionOnEnter": "on",
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "MAIN.C": "cpp"
+    }
+}

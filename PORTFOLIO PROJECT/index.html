@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS for Animations */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-up-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Hero Parallax Background */
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+    }
+    .progress-bar {
+      height: 5px;
+      background: linear-gradient(90deg, #4f46e5, #22d3ee);
+    }
+    .progress-bar::before {
+      content: "";
+      height: 100%;
+      width: 0;
+      background: #fff;
+      display: block;
+      transition: width 1.5s ease-in-out;
+    }
+    .progress-bar-visible::before {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-gray-800 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-3xl font-bold">My Portfolio</div>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:text-gray-400">About</a></li>
+        <li><a href="#skills" class="hover:text-gray-400">Skills</a></li>
+        <li><a href="#projects" class="hover:text-gray-400">Projects</a></li>
+        <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero h-screen flex flex-col justify-center items-center text-center text-white">
+    <h1 class="text-6xl font-bold mb-4 fade-in-up">Hi, I'm Kunj</h1>
+    <p class="text-xl mb-8 fade-in-up">A Full Stack Developer & Designer</p>
+    <a href="#projects" class="px-8 py-4 bg-indigo-600 rounded-full hover:bg-indigo-500 fade-in-up">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold fade-in-up">About Me</h2>
+      <p class="mt-6 text-lg fade-in-up">I'm a passionate web developer focused on creating high-performance websites with exceptional user experiences. My aim is to write clean and efficient code to make the web more beautiful.</p>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-500">
+          <i class="fas fa-code text-4xl text-indigo-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Clean Code</h3>
+          <p>I write efficient, clean, and maintainable code to make websites scalable.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-500">
+          <i class="fas fa-bolt text-4xl text-yellow-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Fast Performance</h3>
+          <p>I focus on performance optimization to ensure fast load times and smooth UX.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-500">
+          <i class="fas fa-mobile-alt text-4xl text-green-500 mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Responsive Design</h3>
+          <p>Ensuring that websites are fully responsive and accessible on all devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center fade-in-up">Skills</h2>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Skill 1 -->
+        <div class="fade-in-up">
+          <h3 class="text-2xl font-bold mb-2">HTML & CSS</h3>
+          <div class="w-full bg-gray-600 rounded-lg overflow-hidden">
+            <div class="progress-bar progress-bar-visible"></div>
+          </div>
+        </div>
+        <!-- Skill 2 -->
+        <div class="fade-in-up">
+          <h3 class="text-2xl font-bold mb-2">JavaScript</h3>
+          <div class="w-full bg-gray-600 rounded-lg overflow-hidden">
+            <div class="progress-bar progress-bar-visible"></div>
+          </div>
+        </div>
+        <!-- Skill 3 -->
+        <div class="fade-in-up">
+          <h3 class="text-2xl font-bold mb-2">Tailwind CSS</h3>
+          <div class="w-full bg-gray-600 rounded-lg overflow-hidden">
+            <div class="progress-bar progress-bar-visible"></div>
+          </div>
+        </div>
+        <!-- Skill 4 -->
+        <div class="fade-in-up">
+          <h3 class="text-2xl font-bold mb-2">React.js</h3>
+          <div class="w-full bg-gray-600 rounded-lg overflow-hidden">
+            <div class="progress-bar progress-bar-visible"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-gray-900">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold text-white fade-in-up">My Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 fade-in-up">
+        <!-- Project 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+          <img src="https://source.unsplash.com/random/400x300" alt="Project" class="w-full h-40 object-cover mb-4">
+          <h3 class="text-2xl font-bold mb-2">E-commerce Website</h3>
+          <p>A fully responsive and interactive e-commerce website with shopping cart functionality.</p>
+        </div>
+        <!-- Project 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+          <img src="https://source.unsplash.com/random/400x300?2" alt="Project" class="w-full h-40 object-cover mb-4">
+          <h3 class="text-2xl font-bold mb-2">Portfolio Website</h3>
+          <p>A personal portfolio website showcasing skills, projects, and contact details.</p>
+        </div>
+        <!-- Project 3 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-500">
+          <img src="https://source.unsplash.com/random/400x300?3" alt="Project" class="w-full h-40 object-cover mb-4">
+          <h3 class="text-2xl font-bold mb-2">Blog Website</h3>
+          <p>A dynamic blog website built with React and a content management system (CMS).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-800">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold fade-in-up">Contact Me</h2>
+      <p class="mt-6 text-lg fade-in-up">Get in touch with me for any projects or collaborations.</p>
+      <form action="#" class="mt-8 max-w-lg mx-auto fade-in-up">
+        <input type="text" class="w-full p-4 mb-4 rounded-lg bg-gray-700 border border-gray-600" placeholder="Name">
+        <input type="email" class="w-full p-4 mb-4 rounded-lg bg-gray-700 border border-gray-600" placeholder="Email">
+        <textarea class="w-full p-4 mb-4 rounded-lg bg-gray-700 border border-gray-600" placeholder="Message"></textarea>
+        <button type="submit" class="px-8 py-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-500">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-6 text-center">
+    <p>&copy; 2024 Kunj Shah. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Fade-in animation
+    const fadeIns = document.querySelectorAll('.fade-in-up');
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    window.addEventListener('scroll', () => {
+      fadeIns.forEach((element) => {
+        const position = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (position < screenPosition) {
+          element.classList.add('fade-in-up-visible');
+        }
+      });
+
+      progressBars.forEach((bar) => {
+        const position = bar.getBoundingClientRect().top;
+        if (position < window.innerHeight) {
+          bar.classList.add('progress-bar-visible');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
